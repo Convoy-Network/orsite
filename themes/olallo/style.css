@@ -1,0 +1,115 @@
+/*
+Theme Name: olallo
+Theme URI: http://manolecks.mobi/
+Author: Manolecks
+Author URI: http://manolecks.mobi/
+Description: Diseño de la pagina web de olallo Rubio
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mka
+Tags: personalizado desde cero, dinamico, ligero
+*/
+
+@import url('css/reset.css');
+@import url('css/master.css');
+@import url('css/jquery.fancybox.css');
+@import url('css/jquery.bxslider.css');
+
+.contenidoBase{
+    padding-bottom:20px;
+}
+
+.textoBase{ margin:20px auto;}
+img.teaserBanner {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 10px; overflow: hidden;
+}
+
+.videoWrapper iframe,
+.videoWrapper object,
+.videoWrapper embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.PostImg{
+    overflow: hidden;
+    height: 50%;
+    position: relative;}
+
+.PostImg img{
+    width:auto !important;
+    height: 100% !important;
+    max-width: initial !important;
+    max-height: initial !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);}
+
+.BtnPlay:after{top: 50% !important;}
+
+.fancybox-inner {height: 100% !important;}
+
+.page-template-acerca .interTexto img{
+    width: 50%;
+    height: auto;
+    float: left;
+    margin-right: 30px;}
+
+.page-id-40 .textoBase p{font-family: "TradeGothicLTPro-Bold"; font-size: 25px;}
+
+.page-id-40 .textoBase a{font-size: 18px; color:#0F85FA; text-decoration: none; font-family: 'dinregular';}
+
+.page-id-40 .textoBase a:hover{opacity: .7;}
+
+ul#pagination {
+    clear: both;
+    text-align: center;
+}
+
+ul#pagination li a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    padding: 15px 0;
+    font-family: "TradeGothicLTPro-Bold";
+    margin-right: 50px;}
+
+
+@media only screen and (max-width: 760px) {
+
+    .PostImg img{
+    width:120%;
+    height:auto;}
+
+    .PostImg{
+    margin: 0 auto;
+    width: 90%;
+    clear: both;}
+
+    .redesSociales{display:none;}
+
+    .page-template-acerca .interTexto img{width: 100%; margin: 20px 0;}
+
+}
+

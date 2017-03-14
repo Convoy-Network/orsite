@@ -1,0 +1,2 @@
+[01-Feb-2017 06:48:25 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home/convoyne/public_html/olallorubio/wp-content/plugins/hello.php on line 60
+[01-Feb-2017 12:27:31 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home/convoyne/public_html/olallorubio/wp-content/plugins/hello.php on line 60

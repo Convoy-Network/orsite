@@ -1,0 +1,479 @@
+@import "text"
+//Importacion de fuentes
+
+@import '../fonts/dinblack/stylesheet.css'
+@import '../fonts/trade/MyFontsWebfontsKit.css'
+@import '../fonts/iconos/css/fontello.css'
+
+
+$negroBase: #000
+$blanco: #fff
+$gris: #333
+
+//Medias de tamaño
+$break-small: 320px
+$break-mediu: 980px
+$break-tablet: 48em
+$break-phone: 30em
+$break-super: 120em
+
+//fuentes tamaños
+$fuenteBase: 1em
+
+//tipografia
+$din: 'dinregular'
+$trade: 'TradeGothicLTPro-Bold'
+$tello: 'fontello'
+
+//Mixinis
+
+=flex($flex)
+    display: $flex
+    display: -webkit-$flex
+
+=direcflex($row)
+    flex-direction: $row
+    -webkit-flex-direction: $row
+
+=box()
+    box-sizing: border-box
+    //-webkit-box-sizng: border-box
+    -moz-box-sizing: border-box
+*
+    +box
+
+body
+    background: $negroBase
+    color: $blanco
+
+
+
+.text-left
+    text-align: left !important
+.hiden
+    display: none
+    text-indent: -9999
+/*contenido header*/
+.contenidoHeader
+    border-bottom: 1px solid $blanco
+/*slider*/
+.sldier
+    padding: 18px 0
+.titleSlider
+    position: absolute
+    top: 5em
+    left: 52em
+    color: Red
+    /*background: green*/
+    padding: 25px
+    box-sizing: border-box
+    text-align: center
+    font-family: $trade
+    text-transform: uppercase
+    color: $blanco
+
+
+.titleSlider h3
+    font-size: 1.3em
+.titleSlider p
+    font-size: $fuenteBase + 2.2
+    line-height: 0.9em
+
+
+.bx-viewport
+    height: 400px !important
+.size-full
+    /*width: 100*/
+    margin: 0 auto
+    display: block
+/*Logo*/
+.logo
+    text-transform: uppercase
+    margin-bottom: 0
+    & a
+        color: $blanco
+        font-family: $trade
+        font-size: $fuenteBase + 1.1
+        width: 100%
+        height: 100%
+        display: block
+        text-decoration: none
+
+/*Redes sociales*/
+.redesSociales
+    padding: 0
+    margin: 2em 0
+    list-style: none
+    text-align: right
+    & li
+        display: inline-block
+        vertical-align: middle
+        margin-left: 0
+        & a
+            color: $blanco
+            font-size: $fuenteBase + 1
+            text-decoration: none
+
+
+/*Menu*/
+.Menu
+    border-top: 1px solid $blanco
+    border-bottom: 1px solid $blanco
+    &Ul
+        padding: 0
+        margin: 0
+        list-style: none
+
+        & li
+            display: inline-block
+            vertical-align: middle
+            padding: 4px 0
+
+            & a
+                color: $gris
+                font-family: $trade
+                text-transform: uppercase
+                font-size: $fuenteBase + 1
+                text-decoration: none
+            & a:hover
+                color: $blanco
+
+            & a.active
+                color: $blanco
+        & li:first-child
+            margin-left: 0
+/*Posts*/
+.contenido
+    padding-top: 1em
+    & .tituloBase
+        font-size: $fuenteBase + 1.2
+        color: $blanco
+        font-family: $trade
+.LinkPost
+    color:  $blanco
+    text-decoration: none
+    /*position: relative*/
+    /*& .PostImg img
+        width: 390px
+        height: 376px*/
+.Post
+    text-align: center
+    max-height: 680px
+    height: 680px
+    
+    &Text
+        text-align: center
+        & h2
+            font-family: $trade
+            font-size: $fuenteBase + 1
+            padding-top: $fuenteBase + 0.2
+            text-transform: uppercase
+        & p
+            font-size: $fuenteBase + 0.1
+    & .fecha
+        font-family: $trade
+        font-size: $fuenteBase
+        margin: 0
+    & a
+        color: $blanco
+        text-decoration: none
+
+.listado-recientes
+    & li
+        margin-left: 0
+        & a
+            & img
+                /*width: 390px*/
+                /*max-width: 100%*/
+        & .Post
+            height: inherit
+            max-height: inherit
+
+/*Play post*/
+=Transform($numTrans,$numTrans)
+    transform: translate($numTrans,$numTrans)
+    -webkit-transform: translate($numTrans,$numTrans)
+
+.BtnPlay:after
+    content: "\e801"
+    position: absolute
+    +Transform(-50%,-50%)
+    top: 30%
+    font-size: $fuenteBase + 4
+    background: rgba(0,0,0,0.8)
+    border-radius: 50%
+    font-family: $tello
+    left: 50%
+    width: 95px
+    height: 95px
+    text-align: center
+
+.sinPadding
+    padding-top: 0 !important
+    margin: 0
+.paddingTexto
+    padding-top: 1em
+.textoLarge
+    font-size: $fuenteBase + 2.5 !important
+/*aside*/
+.asideTitulo
+    margin-top: 0.4em
+    padding-top: $fuenteBase + 0.3
+aside
+    & h3
+        text-transform: uppercase
+        font-size: $fuenteBase + 0.9
+
+/*Estilo de flecha y estilo*/
+.flecha-bajo
+    text-align: center
+    font-size: $fuenteBase + 2
+    display: table
+    margin: 0 auto
+
+/*Paginacion*/
+.post_pagina
+    border-top: 2px solid $blanco
+    & a
+        color: $blanco
+        text-decoration: none
+        display: inline-block
+        vertical-align: middle
+        font-size: $fuenteBase + 0.3
+        text-transform: uppercase
+        padding: 15px 0
+        font-family: $trade
+    & a:last-child
+        text-align: right
+        float: right
+    & a:first-child
+        float: left
+        text-align: left
+
+/*lightbox*/
+.line
+    font-size: $fuenteBase + 2
+    text-align: center
+    text-transform: uppercase
+    font-family: $trade
+    padding: 18px 0
+.azul
+    color: #0F85FA
+.lightboxStyle
+    text-align: center
+    padding: 12px
+    color: $blanco
+    & .lightboxTitulo
+        font-family: $trade
+        font-size: $fuenteBase + 1
+        text-transform: uppercase
+        padding-bottom: 8px
+    & .lightboxTexto
+        font-size: $fuenteBase
+        padding-top: 15px
+        width: 75%
+        margin: 0 auto
+    & .lightboxImg
+        display: table
+        margin: 0 auto
+        & img
+            width: 300px
+            height: 300px
+            /*max-width: 300px*/
+    & audio
+        display: block
+        width: 40%
+        margin: 0 auto
+        padding-bottom: 15px
+
+/*estilos de pie*/
+.footer
+    text-align: center
+    border-top: 2px solid $blanco
+    padding-top: 12px
+
+
+/*Links de contacto y links*/
+.linksPersonales
+    margin: 0
+    & li
+        padding: 5px
+        & a
+            color: $blanco
+            text-transform: uppercase
+            font-size: $fuenteBase + 1.2
+            text-decoration: none
+            font-family: $trade
+            &:hover
+                color: desaturate($blanco, 50)
+                text-decoration: underline
+
+
+/*Mansory*/
+/* Base styles */
+
+=Col($columns,$numCol)
+    column-count: $columns
+    column-gap: $numCol + em
+    -moz-column-count: $columns
+    -moz-column-gap: $numCol + em
+    -webkit-column-count: $columns
+    -webkit-column-gap: $numCol + em
+
+
+.gallery
+    +Col(3,5)
+    & div
+
+        & figure
+
+            & div
+                & img
+                    max-width: 100%
+                    width: 100%
+
+
+.item
+    margin-bottom: 12px
+.column
+    float: left
+.column:nth-child(1)
+    margin-right: 1%
+.column:nth-child(2)
+    margin-left: 1%
+    margin-right: 1%
+.column:nth-child(3)
+    margin-left: 1%
+.size-1of4
+    width: 25%
+
+.size-1of3
+    width: 32%
+
+.size-1of2
+    width: 50%
+
+#timeline[data-columns]::before
+    content: '3 .column.size-1of3'
+#nav-mobile
+    display: none
+    background: url(../img/nav.png) no-repeat center center
+    float: left
+    width: 60px
+    height: 60px
+    position: relative
+    left: 0
+    top: 0
+    opacity: 0.6
+#nav-mobile.nav-active
+    opacity: 1
+/* Configurate salvattore with media queries */
+@media screen and (max-width: 500px)
+    #timeline[data-columns]::before
+        content: '1 .column'
+
+    nav .MenuUl
+        display: none
+    nav .MenuUl.open-menu
+        max-height: 400px
+        transition: max-height .4s
+        display: block
+
+
+    #nav-mobile
+        display: block
+        top: -10px
+    .search-form
+        float: inherit !important
+
+
+
+
+
+@media screen and (min-width: 451px) and (max-width: 700px)
+    #timeline[data-columns]::before
+        content: '2 .column.size-1of2'
+
+
+
+@media screen and (min-width: 701px) and (max-width: 850px)
+    #timeline[data-columns]::before
+        content: '3 .column.size-1of3'
+
+
+
+/*@media screen and (min-width: 851px)
+    #timeline[data-columns]::before
+        content: '4 .column.size-1of4'*/
+
+/*Estilos de wordpress*/
+/*video*/
+
+.contenedor-video
+    height: 0
+    overflow: hidden
+    padding: 47.25%
+    padding-top: 30px
+    position: relative
+
+
+.contenedor-video iframe,
+.contenedor-video object,
+.contenedor-video embed,
+.contenedor-video video
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+
+
+.img-responsive
+    max-width: 100%
+    width: 100%
+    height: 566px
+.current_page_item
+    color: $blanco
+
+.menu-footer-container #menu-footer .current_page_parent a,
+.menu-footer-container #menu-footer .current-menu-item a,
+.menu-footer-container #menu-footer .current_page_item a,
+.MenuUl .current_page_parent a,
+.MenuUl .current_page_item a,
+.menu-item-object-category a
+    color: $blanco
+
+/*Form wordpress*/
+.search-form,
+.menu-principal-container
+    display: inline-block
+.search-form
+    float: right
+    vertical-align: middle
+    padding-top: 9px
+    margin-right: 16px
+    & .search-field
+        border: 1px solid $blanco
+        background: none!important
+        padding: 5px
+        height: 28px
+        color: $blanco
+        font-family: $trade
+    & .search-submit
+        border: 0
+        background: $blanco
+        position: relative
+        background: none
+        cursor: pointer
+    & .search-submit:after
+        content: "\e804"
+        font-family: $tello
+        background: $blanco
+        position: absolute
+        display: block
+        top: -18px
+        padding: 3px
+        left: -4px
+        font-size: 20px
+.interTexto
+    margin-bottom: 6em
